@@ -21,7 +21,6 @@ songs.forEach(s=> template += `<li onclick="app.songsController.removeSong('${s.
 document.getElementById("playlist").innerHTML=template;
 console.log(ProxyState.songs)
 console.log(ProxyState.playlist);
-
  }
 
 //Public
@@ -34,7 +33,7 @@ export default class SongsController {
   /**Takes in the form submission event and sends the query to the service */
   search(e) {
     
-    //NOTE You dont need to change this method
+   
     e.preventDefault();
     try {
       songsService.getMusicByQuery(e.target.query.value);
